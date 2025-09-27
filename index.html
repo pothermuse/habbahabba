@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>HabbaHabba</title>
+  <meta charset="UTF-8">
+  <title>HabbaHabba // CRT Vibes</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #000;
+      color: #00ff00;
+      font-family: "Courier New", Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1, p {
+      text-shadow: 0 0 8px #00ff00;
+    }
+    .crt {
+      position: relative;
+    }
+    .crt::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      pointer-events: none;
+    }
+    img {
+      width: 200px;
+      margin-top: 20px;
+      filter: drop-shadow(0 0 10px #00ff00);
+    }
+    button {
+      background: black;
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 10px 20px;
+      margin-top: 30px;
+      cursor: pointer;
+      text-shadow: 0 0 5px #00ff00;
+    }
+    button:hover {
+      background: #00ff00;
+      color: black;
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello from HabbaHabba 🚀</h1>
-  <p>This is my first GitHub Pages site.</p>
+<body class="crt">
+  <h1>Welcome to HabbaHabba</h1>
+  <p>Terminal green, CRT-style ✨</p>
+  <img src="your-image.png" alt="Green CRT eye logo">
+  <button>Enter</button>
 </body>
 </html>
